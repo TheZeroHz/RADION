@@ -1,0 +1,65 @@
+
+
+
+////////////////////////////////    How To Use Ethernet  ////////////////////////////
+GPIO 0  - ETH_CLK (50MHz clock input)
+GPIO 16 - ETH_PHY_POWER (Powers the LAN8720 chip)
+GPIO 18 - ETH_MDIO (Ethernet management)
+GPIO 19 - ETH_TXD0
+GPIO 21 - ETH_TX_EN
+GPIO 22 - ETH_TXD1
+GPIO 23 - ETH_MDC (Ethernet management clock)
+GPIO 25 - ETH_RXD0
+GPIO 26 - ETH_RXD1
+GPIO 27 - ETH_CRS_DV
+
+The ethernet will give these error if GPIO is hokked up with extra pull up register:
+E (119) lan87xx: lan87xx_pwrctl(409): power up timeout
+E (119) lan87xx: lan87xx_init(491): power control failed
+E (119) esp_eth: esp_eth_driver_install(215): init phy failed
+
+To solve This we need to put a switch to enable coding after coding we should disable that pin....
+
+
+/////////////////////////////   Display ///////////////////////
+
+IS fully Ok
+
+////////////////////////////  WiFi //////////////////////////
+
+Is Fully Ok
+
+////////////////////////// Buzzer ////////////////////////
+
+Is Fully Ok GPIO 33
+
+
+////////////////////////// Buttons ///////////////////
+Fully Ok
+
+
+          10kΩ
+3.3V ----/\/\/\----+---- GPIO 39 (LEFT)
+                   |
+              [Button]
+                   |
+                  GND
+
+        10kΩ
+3.3V ----/\/\/\----+---- GPIO 35 (OK)
+                   |
+              [Button]
+                   |
+                  GND
+
+        10kΩ
+3.3V ----/\/\/\----+---- GPIO 36 (RIGHT)
+                   |
+              [Button]
+                   |
+                  GND
+
+//////////////////////// Battery ADC /////////////
+
+Fully Ok
+
