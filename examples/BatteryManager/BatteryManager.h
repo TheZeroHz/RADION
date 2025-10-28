@@ -7,7 +7,7 @@
 
 #include "Arduino.h"
 
-#define DEFAULT_PIN 3
+#define DEFAULT_PIN 32
 #define DEFAULT_CONVERSION_FACTOR 1.455
 #define DEFAULT_READS 4095
 
