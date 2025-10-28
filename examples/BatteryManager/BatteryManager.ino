@@ -1,6 +1,6 @@
 #include "BatteryManager.h"
 
-// Create battery object using default pin (3) and default conversion factor
+// Create battery object using default pin (32) and default conversion factor
 BatteryManager battery;
 
 // Alternative constructors you can use:
